@@ -1,0 +1,61 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#151515;background:#fff}
+.topbar{background:#111;color:#fff;text-align:center;padding:10px;font-size:13px;font-weight:700}
+.hero{max-width:1100px;margin:auto;padding:36px 20px 42px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.hero-copy{padding:10px 0}
+.badge{display:inline-block;background:#fff0e8;color:#b84600;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:800}
+h1{font-size:clamp(38px,5vw,60px);line-height:.98;letter-spacing:-2.5px;margin:15px 0}
+.hero p{color:#666;line-height:1.55;max-width:520px}
+.price{font-size:32px;font-weight:900;margin:20px 0 5px}
+.stock{font-size:12px;font-weight:800;color:#c0392b}
+.cta,.submit{display:flex;justify-content:center;align-items:center;background:#111;color:#fff;border:0;border-radius:11px;padding:16px 20px;font-weight:900;text-decoration:none;cursor:pointer;margin-top:18px}
+.cta{max-width:380px}
+.cta:hover,.submit:hover{opacity:.92}
+.trust{font-size:11px;color:#777;margin-top:9px}
+.hero-image{display:flex;justify-content:center}
+.hero-image img{width:100%;max-width:520px;max-height:500px;object-fit:contain;mix-blend-mode:multiply}
+.benefits{max-width:1100px;margin:auto;padding:0 20px 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.benefits div{border:1px solid #eee;border-radius:13px;padding:18px;font-size:14px}
+.benefits small{display:block;color:#777;line-height:1.4;margin-top:6px}
+.offers{background:#f7f7f7;padding:44px 20px}
+.offers h2,.order h2{text-align:center;font-size:30px;margin:0}
+.plans{max-width:680px;margin:24px auto 0;display:grid;gap:11px}
+.plan{position:relative;background:#fff;border:2px solid #ddd;border-radius:14px;padding:18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:14px}
+.plan.selected{border-color:#111}
+.plan span{position:absolute;top:-10px;left:15px;background:#111;color:#fff;border-radius:20px;padding:4px 8px;font-size:9px;font-weight:800}
+.order{background:#f7f7f7;padding:45px 20px 90px}
+.muted{text-align:center;color:#666;margin:8px 0 18px}
+#orderForm,.summary{max-width:600px;margin:15px auto;background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:20px}
+.chosen{background:#f4f4f4;padding:12px;border-radius:10px;display:flex;justify-content:space-between;gap:15px;font-size:13px}
+label{display:block;font-size:12px;font-weight:800;margin:13px 0}
+label span{font-weight:400;color:#888}
+input,textarea{width:100%;padding:13px;margin-top:6px;border:1px solid #ddd;border-radius:9px;font:inherit;background:#fff}
+input:focus,textarea:focus{outline:2px solid #ddd;border-color:#111}
+.error{display:block;color:#c0392b;font-size:10px;min-height:0;margin-top:4px}
+.submit{width:100%;transition:.15s}
+.submit:disabled{cursor:wait}
+.payment{display:block;text-align:center;color:#777;margin-top:9px}
+.send-status{text-align:center;font-size:12px;font-weight:700;margin-top:10px;min-height:16px}
+.summary{display:grid;gap:10px}
+.summary div{display:flex;justify-content:space-between;gap:15px}
+.summary span{color:#777}
+.summary strong{font-size:24px}
+.honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+.sticky{display:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.58);align-items:center;justify-content:center;padding:18px;z-index:20}
+.modal.show{display:flex}
+.card{background:#fff;border-radius:18px;padding:28px;max-width:410px;width:100%;text-align:center}
+.ok{margin:auto;width:55px;height:55px;border-radius:50%;background:#e8f7ed;color:#159447;display:grid;place-items:center;font-size:28px;font-weight:900}
+.order-number{background:#f6f6f6;padding:10px;border-radius:9px}
+@media(max-width:700px){
+.hero{grid-template-columns:1fr;padding-top:22px}
+.hero-image{order:-1}
+.hero-image img{max-width:390px;max-height:360px}
+.hero-copy{text-align:left}
+.benefits{grid-template-columns:1fr}
+.benefits div{padding:15px}
+.sticky{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:9px 12px;z-index:15;justify-content:space-between;align-items:center}
+.sticky a{background:#111;color:#fff;padding:12px 16px;border-radius:9px;text-decoration:none;font-weight:900;font-size:12px}
+.order{padding-bottom:82px}
+}

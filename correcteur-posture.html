@@ -1,0 +1,1538 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+
+<title>Correcteur de posture pour soulager les douleurs dorsales — Sénégal</title>
+
+<style>
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#151515;
+  background:#fff;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+.topbar{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:11px 15px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.lp-flag{
+  display:inline-block; width:1.1em; height:0.8em; vertical-align:-0.05em;
+  background-image:url('https://flagcdn.com/w40/sn.png');
+  background-size:cover; background-position:center; border-radius:2px;
+}
+
+.hero{
+  max-width:1150px;
+  margin:auto;
+  padding:45px 20px 55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero-copy{
+  padding:10px 0;
+}
+
+.badge{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  border-radius:999px;
+  padding:8px 13px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.3px;
+}
+
+.hero h1{
+  font-size:clamp(40px,5vw,64px);
+  line-height:.98;
+  letter-spacing:-3px;
+  margin:17px 0;
+}
+
+.hero p{
+  color:#626262;
+  line-height:1.65;
+  max-width:550px;
+  font-size:16px;
+}
+
+.price{
+  font-size:34px;
+  font-weight:900;
+  margin:22px 0 5px;
+}
+
+.stock{
+  font-size:12px;
+  font-weight:800;
+  color:#b42318;
+}
+
+.cta,
+.submit{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#111;
+  color:#fff;
+  border:0;
+  border-radius:12px;
+  padding:17px 20px;
+  font-weight:900;
+  text-decoration:none;
+  cursor:pointer;
+  margin-top:18px;
+  transition:.15s;
+}
+
+.cta{
+  max-width:390px;
+}
+
+.cta:hover,
+.submit:hover{
+  transform:translateY(-1px);
+  opacity:.93;
+}
+
+.trust{
+  font-size:11px;
+  color:#777;
+  margin-top:10px;
+}
+
+.hero-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:550px;
+  max-height:560px;
+  object-fit:contain;
+  border-radius:18px;
+}
+
+/* BENEFITS */
+
+.benefits{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px 55px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
+.benefits div{
+  border:1px solid #e9e9e9;
+  border-radius:15px;
+  padding:20px;
+  background:#fff;
+}
+
+.benefits b{
+  font-size:14px;
+}
+
+.benefits small{
+  display:block;
+  color:#777;
+  line-height:1.5;
+  margin-top:7px;
+}
+
+/* PRESENTATION */
+
+.presentation{
+  background:#f6f6f6;
+  padding:65px 20px;
+}
+
+.presentation-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.presentation-image img{
+  width:100%;
+  border-radius:18px;
+}
+
+.presentation-copy .badge{
+  background:#111;
+}
+
+.presentation-copy h2{
+  font-size:clamp(31px,4vw,46px);
+  line-height:1.05;
+  letter-spacing:-1.8px;
+  margin:15px 0;
+}
+
+.presentation-copy p{
+  color:#666;
+  line-height:1.65;
+}
+
+.presentation-copy ul{
+  padding:0;
+  margin:22px 0 0;
+  list-style:none;
+}
+
+.presentation-copy li{
+  margin:12px 0;
+  font-weight:700;
+  font-size:14px;
+}
+
+/* DOULEURS */
+
+.problem{
+  max-width:1100px;
+  margin:auto;
+  padding:65px 20px;
+}
+
+.section-title{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 35px;
+}
+
+.section-title h2{
+  font-size:clamp(30px,4vw,43px);
+  letter-spacing:-1.5px;
+  margin:0 0 12px;
+}
+
+.section-title p{
+  color:#666;
+  line-height:1.6;
+}
+
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.problem-card{
+  border:1px solid #e8e8e8;
+  border-radius:16px;
+  padding:23px;
+}
+
+.problem-card strong{
+  display:block;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.problem-card p{
+  color:#707070;
+  line-height:1.5;
+  font-size:13px;
+  margin:0;
+}
+
+/* FEATURES */
+
+.features{
+  background:#111;
+  color:#fff;
+  padding:65px 20px;
+}
+
+.features-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.features h2{
+  text-align:center;
+  font-size:clamp(30px,4vw,43px);
+  letter-spacing:-1.5px;
+  margin:0 0 35px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.feature-card{
+  border:1px solid #333;
+  border-radius:16px;
+  padding:23px;
+  background:#181818;
+}
+
+.feature-card b{
+  display:block;
+  margin-bottom:8px;
+  font-size:15px;
+}
+
+.feature-card p{
+  color:#bcbcbc;
+  line-height:1.5;
+  font-size:13px;
+  margin:0;
+}
+
+/* COMMENT */
+
+.how{
+  padding:65px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.step{
+  border:1px solid #e7e7e7;
+  border-radius:16px;
+  padding:22px;
+}
+
+.step-number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  margin-bottom:15px;
+}
+
+.step b{
+  display:block;
+  margin-bottom:7px;
+}
+
+.step p{
+  color:#777;
+  font-size:13px;
+  line-height:1.5;
+  margin:0;
+}
+
+/* IMAGE SHOWCASE */
+
+.showcase{
+  background:#f6f6f6;
+  padding:60px 20px;
+}
+
+.showcase-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.showcase img{
+  width:100%;
+  max-height:620px;
+  object-fit:contain;
+  border-radius:18px;
+}
+
+/* OFFRES */
+
+.offers{
+  background:#f6f6f6;
+  padding:45px 20px 60px;
+}
+
+.offers h2{
+  text-align:center;
+  font-size:31px;
+  margin:0;
+}
+
+.offers-intro{
+  text-align:center;
+  color:#666;
+  font-size:13px;
+  margin:9px 0 22px;
+}
+
+.plans{
+  max-width:680px;
+  margin:25px auto 0;
+  display:grid;
+  gap:12px;
+}
+
+.plan{
+  position:relative;
+  width:100%;
+  background:#fff;
+  border:2px solid #ddd;
+  border-radius:15px;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  font-size:14px;
+  transition:.15s;
+}
+
+.plan:hover{
+  border-color:#777;
+}
+
+.plan.selected{
+  border-color:#111;
+  box-shadow:0 4px 18px rgba(0,0,0,.07);
+}
+
+.plan span{
+  position:absolute;
+  top:-11px;
+  left:15px;
+  background:#111;
+  color:#fff;
+  border-radius:20px;
+  padding:5px 9px;
+  font-size:9px;
+  font-weight:900;
+}
+
+.plan strong{
+  font-size:20px;
+}
+
+/* ORDER */
+
+.order{
+  background:#f6f6f6;
+  padding:50px 20px 100px;
+}
+
+.order h2{
+  text-align:center;
+  font-size:32px;
+  margin:0;
+}
+
+.muted{
+  text-align:center;
+  color:#666;
+  margin:9px 0 20px;
+}
+
+#orderForm,
+.summary{
+  max-width:600px;
+  margin:15px auto;
+  background:#fff;
+  border:1px solid #e5e5e5;
+  border-radius:17px;
+  padding:21px;
+}
+
+.chosen{
+  background:#f3f3f3;
+  padding:13px;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  font-size:13px;
+}
+
+label{
+  display:block;
+  font-size:12px;
+  font-weight:800;
+  margin:14px 0;
+}
+
+label span{
+  font-weight:400;
+  color:#888;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:14px;
+  margin-top:7px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:#fff;
+}
+
+input:focus,
+textarea:focus{
+  outline:2px solid #ddd;
+  border-color:#111;
+}
+
+.error{
+  display:block;
+  color:#c0392b;
+  font-size:10px;
+  min-height:0;
+  margin-top:4px;
+}
+
+.submit{
+  width:100%;
+}
+
+.payment{
+  display:block;
+  text-align:center;
+  color:#777;
+  margin-top:9px;
+}
+
+.send-status{
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  margin-top:10px;
+  min-height:16px;
+}
+
+.summary{
+  display:grid;
+  gap:11px;
+}
+
+.summary div{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.summary span{
+  color:#777;
+}
+
+.summary strong{
+  font-size:24px;
+}
+
+.honeypot{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  opacity:0!important;
+}
+
+/* STICKY */
+
+.sticky{
+  display:none;
+}
+
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.62);
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:100;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.card{
+  background:#fff;
+  border-radius:19px;
+  padding:30px;
+  max-width:410px;
+  width:100%;
+  text-align:center;
+}
+
+.ok{
+  margin:auto;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#e8f7ed;
+  color:#159447;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  font-weight:900;
+}
+
+.order-number{
+  background:#f5f5f5;
+  padding:11px;
+  border-radius:9px;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:25px 18px 40px;
+    gap:20px;
+  }
+
+  .hero-image{
+    order:-1;
+  }
+
+  .hero-image img{
+    max-width:390px;
+    max-height:380px;
+  }
+
+  .hero h1{
+    font-size:43px;
+    letter-spacing:-2px;
+  }
+
+  .benefits{
+    grid-template-columns:1fr;
+    padding:0 18px 40px;
+  }
+
+  .presentation-inner{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .presentation{
+    padding:50px 18px;
+  }
+
+  .problem{
+    padding:50px 18px;
+  }
+
+  .problem-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    padding:50px 18px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .how{
+    padding:50px 18px;
+  }
+
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .showcase{
+    padding:45px 18px;
+  }
+
+  .offers{
+    padding:42px 18px 50px;
+  }
+
+  .order{
+    padding:45px 18px 90px;
+  }
+
+  .sticky{
+    display:flex;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    border-top:1px solid #ddd;
+    padding:9px 12px;
+    z-index:90;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .sticky b{
+    font-size:15px;
+  }
+
+  .sticky a{
+    background:#111;
+    color:#fff;
+    padding:13px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:900;
+    font-size:12px;
+  }
+
+  .order{
+    padding-bottom:85px;
+  }
+}
+
+@media(max-width:480px){
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .plan{
+    padding:18px 15px;
+  }
+
+  .plan strong{
+    font-size:17px;
+  }
+
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<!-- ⚠️ À VÉRIFIER : ID repris du produit précédent, remplace-le par le
+     Pixel/compte Meta de CE produit s'il est différent. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1963733684341871');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1963733684341871&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div class="topbar">
+  <span class="lp-flag" role="img" aria-label="Sénégal"></span> Livraison au Sénégal · Paiement à la livraison
+</div>
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-copy">
+
+    <span class="badge">
+      🔥 OFFRE DU MOMENT
+    </span>
+
+    <h1>
+      Dites stop au dos courbé et aux douleurs dorsales
+    </h1>
+
+    <p>
+      Découvrez notre correcteur de posture, conçu pour aider à maintenir
+      votre dos et vos épaules dans une position plus droite et vous
+      accompagner au quotidien.
+    </p>
+
+    <div class="price" id="heroPrice">
+      20 900 FCFA
+    </div>
+
+    <div class="stock">
+      ● Stock limité disponible
+    </div>
+
+    <a class="cta" href="#commande">
+      COMMANDER MAINTENANT →
+    </a>
+
+    <div class="trust">
+      ✓ Paiement à la livraison &nbsp; · &nbsp;
+      ✓ Commande rapide &nbsp; · &nbsp;
+      ✓ Livraison au Sénégal
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+
+    <img
+      src="correcteur-posture-produit.png"
+      alt="Correcteur de posture noir, porté par un homme"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     BENEFITS
+========================= -->
+
+<section class="benefits">
+
+  <div>
+    <b>✓ Maintien du dos et des épaules</b>
+    <small>
+      Aide à maintenir une position plus droite au quotidien.
+    </small>
+  </div>
+
+  <div>
+    <b>✓ Réglable et unisexe</b>
+    <small>
+      Ajustez facilement le correcteur selon votre morphologie.
+    </small>
+  </div>
+
+  <div>
+    <b>✓ Facile à porter</b>
+    <small>
+      Un maintien pratique pour vous accompagner dans vos activités.
+    </small>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PRESENTATION
+========================= -->
+
+<section class="presentation">
+
+  <div class="presentation-inner">
+
+    <div class="presentation-image">
+
+      <img
+        src="correcteur-posture-femme-senegalaise.png"
+        alt="Femme portant un correcteur de posture"
+      >
+
+    </div>
+
+    <div class="presentation-copy">
+
+      <span class="badge">
+        UNE POSTURE PLUS DROITE
+      </span>
+
+      <h2>
+        Votre posture mérite toute votre attention
+      </h2>
+
+      <p>
+        Les longues heures passées assis, devant un écran, au téléphone,
+        en voiture ou au travail peuvent progressivement modifier nos
+        habitudes posturales.
+      </p>
+
+      <p>
+        Le correcteur de posture aide à maintenir les épaules dans une
+        position plus droite et accompagne votre dos dans vos activités
+        quotidiennes.
+      </p>
+
+      <ul>
+        <li>✓ Maintien des épaules</li>
+        <li>✓ Soutien du dos</li>
+        <li>✓ Ajustement selon votre morphologie</li>
+        <li>✓ Utilisation quotidienne</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROBLEME
+========================= -->
+
+<section class="problem">
+
+  <div class="section-title">
+
+    <h2>
+      Quand la mauvaise posture devient une habitude
+    </h2>
+
+    <p>
+      Une position répétée pendant plusieurs heures peut contribuer à
+      l'apparition de tensions et d'inconfort au niveau du dos et des
+      épaules.
+    </p>
+
+  </div>
+
+  <div class="problem-grid">
+
+    <div class="problem-card">
+
+      <strong>
+        💻 Longues heures devant l'écran
+      </strong>
+
+      <p>
+        Les épaules peuvent progressivement partir vers l'avant lorsque
+        vous restez longtemps devant un ordinateur.
+      </p>
+
+    </div>
+
+    <div class="problem-card">
+
+      <strong>
+        📱 Téléphone au quotidien
+      </strong>
+
+      <p>
+        Une mauvaise position répétée peut favoriser une posture
+        déséquilibrée du haut du corps.
+      </p>
+
+    </div>
+
+    <div class="problem-card">
+
+      <strong>
+        🚗 Temps passé en voiture
+      </strong>
+
+      <p>
+        Les longues périodes assis peuvent également mettre votre posture
+        à rude épreuve.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+  <div class="features-inner">
+
+    <h2>
+      Pourquoi choisir notre correcteur ?
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+
+        <b>Maintien des épaules</b>
+
+        <p>
+          Les sangles croisées accompagnent les épaules vers une position
+          plus droite.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <b>Maintien enveloppant</b>
+
+        <p>
+          Sa conception couvre le haut du dos et la zone abdominale pour
+          un maintien plus complet.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <b>Réglable</b>
+
+        <p>
+          Les sangles permettent d'ajuster le niveau de maintien selon
+          votre morphologie.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <b>Unisexe</b>
+
+        <p>
+          Adapté aussi bien aux hommes qu'aux femmes.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <b>Discret</b>
+
+        <p>
+          Peut être porté sous une tenue quotidienne avec discrétion.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <b>Pour le quotidien</b>
+
+        <p>
+          Au travail, à la maison, en voiture ou pendant vos déplacements.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     COMMENT CA MARCHE
+========================= -->
+
+<section class="how">
+
+  <div class="section-title">
+
+    <h2>
+      Comment utiliser le correcteur ?
+    </h2>
+
+    <p>
+      Quelques étapes simples pour ajuster correctement votre correcteur.
+    </p>
+
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div class="step-number">1</div>
+
+      <b>Enfilez-le</b>
+
+      <p>
+        Placez les sangles autour de vos épaules.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">2</div>
+
+      <b>Ajustez</b>
+
+      <p>
+        Réglez les sangles et la ceinture selon votre morphologie.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">3</div>
+
+      <b>Redressez-vous</b>
+
+      <p>
+        Le maintien accompagne vos épaules vers une position plus droite.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="step-number">4</div>
+
+      <b>Portez-le</b>
+
+      <p>
+        Utilisez-le pendant vos activités quotidiennes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     HOMME + FEMME
+========================= -->
+
+<section class="showcase">
+
+  <div class="showcase-inner">
+
+    <div class="section-title">
+
+      <h2>
+        Pour les hommes comme pour les femmes
+      </h2>
+
+      <p>
+        Un correcteur pensé pour accompagner votre posture au quotidien.
+      </p>
+
+    </div>
+
+    <img
+      src="correcteur-posture-homme-femme-senegal.png"
+      alt="Homme et femme portant le correcteur de posture"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     OFFRES
+========================= -->
+
+<section class="offers">
+
+  <h2>
+    Choisissez votre offre
+  </h2>
+
+  <p class="offers-intro">
+    Profitez de nos offres disponibles au Sénégal.
+  </p>
+
+  <div class="plans">
+
+    <button
+      class="plan selected"
+      type="button"
+      data-qty="1"
+    >
+      <b>1 PIÈCE</b>
+      <strong>20 900 FCFA</strong>
+    </button>
+
+    <button
+      class="plan popular"
+      type="button"
+      data-qty="2"
+    >
+      <span>POPULAIRE</span>
+      <b>2 PIÈCES</b>
+      <strong>29 900 FCFA</strong>
+    </button>
+
+    <button
+      class="plan"
+      type="button"
+      data-qty="3"
+    >
+      <b>3 PIÈCES</b>
+      <strong>36 900 FCFA</strong>
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     COMMANDE
+========================= -->
+
+<section class="order" id="commande">
+
+  <h2>
+    Commandez maintenant
+  </h2>
+
+  <p class="muted">
+    Choisissez votre offre et renseignez vos coordonnées.
+    Vous payez à la livraison.
+  </p>
+
+  <form id="orderForm" novalidate>
+
+    <input
+      class="honeypot"
+      type="text"
+      id="website"
+      autocomplete="off"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+
+    <div class="chosen">
+
+      <span>
+        Votre offre
+      </span>
+
+      <b id="selectedOffer">
+        1 pièce — 20 900 FCFA
+      </b>
+
+    </div>
+
+
+    <label>
+      Prénom et nom *
+
+      <input
+        id="name"
+        autocomplete="name"
+        placeholder="Ex. Mamadou Ndiaye"
+        required
+      >
+
+      <small class="error"></small>
+
+    </label>
+
+
+    <label>
+      Téléphone *
+
+      <input
+        id="phone"
+        autocomplete="tel"
+        inputmode="tel"
+        placeholder="77 XXX XX XX"
+        required
+      >
+
+      <small class="error"></small>
+
+    </label>
+
+
+    <label>
+      Ville / Région *
+
+      <input
+        id="city"
+        autocomplete="address-level2"
+        placeholder="Dakar, Thiès, Touba..."
+        required
+      >
+
+      <small class="error"></small>
+
+    </label>
+
+
+    <label>
+      Adresse / Quartier *
+
+      <input
+        id="address"
+        autocomplete="street-address"
+        placeholder="Quartier, rue, repère..."
+        required
+      >
+
+      <small class="error"></small>
+
+    </label>
+
+
+    <label>
+      Indication
+      <span>(facultatif)</span>
+
+      <textarea
+        id="note"
+        rows="2"
+        placeholder="Près de, référence, précision..."
+      ></textarea>
+
+    </label>
+
+
+    <button
+      class="submit"
+      type="submit"
+    >
+      CONFIRMER MA COMMANDE —
+      <span id="submitPrice">20 900 FCFA</span>
+    </button>
+
+    <small class="payment">
+      🔒 Paiement à la livraison
+    </small>
+
+    <div
+      id="sendStatus"
+      class="send-status"
+      aria-live="polite"
+    ></div>
+
+  </form>
+
+
+  <div class="summary">
+
+    <div>
+      <span>Offre</span>
+      <b id="summaryQty">1 pièce</b>
+    </div>
+
+    <div>
+      <span>Total</span>
+      <strong id="totalPrice">20 900 FCFA</strong>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     STICKY MOBILE
+========================= -->
+
+<div class="sticky">
+
+  <b id="stickyPrice">
+    20 900 FCFA
+  </b>
+
+  <a href="#commande">
+    COMMANDER
+  </a>
+
+</div>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="successModal"
+  role="dialog"
+  aria-modal="true"
+>
+
+  <div class="card">
+
+    <div class="ok">
+      ✓
+    </div>
+
+    <h2>
+      Commande reçue !
+    </h2>
+
+    <p>
+      Merci <b id="customerName"></b>.
+    </p>
+
+    <p>
+      Votre commande a été transmise.
+    </p>
+
+    <p class="order-number">
+      Référence :
+      <b id="orderId"></b>
+    </p>
+
+    <p>
+      Total :
+      <b id="confirmedTotal"></b>
+    </p>
+
+    <button
+      class="submit"
+      id="closeModal"
+      type="button"
+    >
+      FERMER
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     SELECTION DES OFFRES
+========================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const offers = {
+    1: "20 900 FCFA",
+    2: "29 900 FCFA",
+    3: "36 900 FCFA"
+  };
+
+  const plans =
+    document.querySelectorAll(".plan");
+
+  const selectedOffer =
+    document.getElementById("selectedOffer");
+
+  const submitPrice =
+    document.getElementById("submitPrice");
+
+  const totalPrice =
+    document.getElementById("totalPrice");
+
+  const stickyPrice =
+    document.getElementById("stickyPrice");
+
+  const heroPrice =
+    document.getElementById("heroPrice");
+
+  const summaryQty =
+    document.getElementById("summaryQty");
+
+
+  function selectOffer(qty){
+
+    const price = offers[qty];
+
+    plans.forEach(function(plan){
+
+      plan.classList.toggle(
+        "selected",
+        Number(plan.dataset.qty) === qty
+      );
+
+    });
+
+
+    selectedOffer.textContent =
+      `${qty} pièce${qty > 1 ? "s" : ""} — ${price}`;
+
+    submitPrice.textContent = price;
+
+    totalPrice.textContent = price;
+
+    stickyPrice.textContent = price;
+
+    heroPrice.textContent = price;
+
+    summaryQty.textContent =
+      `${qty} pièce${qty > 1 ? "s" : ""}`;
+
+  }
+
+
+  plans.forEach(function(plan){
+
+    plan.addEventListener("click", function(){
+
+      selectOffer(
+        Number(plan.dataset.qty)
+      );
+
+    });
+
+  });
+
+
+  selectOffer(1);
+
+});
+
+</script>
+
+
+<!--
+IMPORTANT :
+Ton script.js existant reste chargé ici.
+Il contient la logique d'envoi/traitement des commandes.
+-->
+
+<script src="script.js"></script>
+
+</body>
+</html>
